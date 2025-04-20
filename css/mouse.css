@@ -1,0 +1,32 @@
+/* 鼠标样式 */
+#cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: rgb(24, 150, 223); /* 设置绿色 */
+    border-radius: 50%; /* 使其为圆形 */
+    opacity: 0.25;
+    z-index: 10086;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    transition-property: background, opacity, transform, box-shadow;
+  }
+  
+  /* 隐藏鼠标 */
+  #cursor.hidden {
+    opacity: 0;
+  }
+  
+  /* 鼠标悬停时的效果 */
+  #cursor.hover {
+    opacity: 0.1;
+    transform: scale(2.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* 阴影效果 */
+  }
+  
+  /* 鼠标点击时的效果 */
+  #cursor.active {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+  

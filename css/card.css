@@ -1,0 +1,174 @@
+/* 侧边栏卡片设置 */
+
+/* 修改 card-info 卡片 */
+#aside-content > .card-widget.card-info {
+    background: linear-gradient(
+      -45deg,
+      #e8d8b9,
+      #eccec5,
+      #a3e9eb,
+      #bdbdf0,
+      #eec1ea
+    );
+    box-shadow: 0 0 5px rgb(66, 68, 68);
+    position: relative;
+    background-size: 400% 400%;
+    animation: Gradient 10s ease infinite;
+  }
+  
+  /* 修改 card-announcement 卡片 */
+  #aside-content > .card-widget.card-announcement {
+    background: linear-gradient(
+      -45deg,
+      #e8d8b9,
+      #eccec5,
+      #a3e9eb,
+      #bdbdf0,
+      #eec1ea
+    );
+    box-shadow: 0 0 5px rgb(66, 68, 68);
+    position: relative;
+    background-size: 400% 400%;
+    animation: Gradient 10s ease infinite;
+  }
+  
+  /* 修改 card-clock 卡片 */
+  #aside-content > .sticky_layout > .card-widget.card-clock {
+    background: linear-gradient(
+      -45deg,
+      #e8d8b9,
+      #eccec5,
+      #a3e9eb,
+      #bdbdf0,
+      #eec1ea
+    );
+    box-shadow: 0 0 5px rgb(66, 68, 68);
+    position: relative;
+    background-size: 400% 400%;
+    animation: Gradient 10s ease infinite;
+  }
+  
+  /* 修改 card-recent-post 卡片 */
+  #aside-content > .sticky_layout > .card-widget.card-recent-post {
+    background: linear-gradient(
+      -45deg,
+      #e8d8b9,
+      #eccec5,
+      #a3e9eb,
+      #bdbdf0,
+      #eec1ea
+    );
+    box-shadow: 0 0 5px rgb(66, 68, 68);
+    position: relative;
+    background-size: 400% 400%;
+    animation: Gradient 10s ease infinite;
+  }
+  
+  /* 修改 card-archives 卡片 */
+  #aside-content > .sticky_layout > .card-widget.card-archives {
+    background: linear-gradient(
+      -45deg,
+      #e8d8b9,
+      #eccec5,
+      #a3e9eb,
+      #bdbdf0,
+      #eec1ea
+    );
+    box-shadow: 0 0 5px rgb(66, 68, 68);
+    position: relative;
+    background-size: 400% 400%;
+    animation: Gradient 10s ease infinite;
+  }
+  
+  /* 修改 card-webinfo 卡片 */
+  #aside-content > .sticky_layout > .card-widget.card-webinfo {
+    background: linear-gradient(
+      -45deg,
+      #e8d8b9,
+      #eccec5,
+      #a3e9eb,
+      #bdbdf0,
+      #eec1ea
+    );
+    box-shadow: 0 0 5px rgb(66, 68, 68);
+    position: relative;
+    background-size: 400% 400%;
+    animation: Gradient 10s ease infinite;
+  }
+  
+  /* 动画效果 */
+  @keyframes Gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @-moz-keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* 黑夜模式适配 */
+  /* [data-theme="dark"] #aside-content > .card-widget.card-info {
+    background: rgba(25, 25, 25, 0.933);
+  } */
+  
+  /* 个人信息Follow me按钮 */
+  #aside-content > .card-widget.card-info > #card-info-btn {
+    background-color: #3eb8be;
+    border-radius: 8px;
+  }
+
+
+/* 卡片背景 */
+  :root {
+    --trans-light: rgba(255, 255, 255, 0.88);
+    --trans-dark: rgba(25, 25, 25, 0.88);
+    --border-style: 1px solid rgb(169, 169, 169);
+    --backdrop-filter: blur(5px) saturate(150%);
+  }
+
+  #recent-posts > .recent-post-item {
+    background: var(--trans-light);
+    backdrop-filter: var(--backdrop-filter);
+    border-radius: 25px;
+    border: var(--border-style);
+  }
+
+
+  div#post,
+  div#page,
+  div#archive {
+    background: var(--trans-light);
+    backdrop-filter: var(--backdrop-filter);
+    border: var(--border-style);
+    border-radius: 20px;
+  }
+
+
+  [data-theme="dark"] #footer::before {
+    background: transparent !important;
+  }
+  [data-theme="dark"] #page-header::before {
+    background: transparent !important;
+  }
+    

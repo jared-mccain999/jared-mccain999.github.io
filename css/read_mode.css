@@ -1,0 +1,32 @@
+.read-mode #aside-content .card-widget {
+    background: rgba(158, 204, 171, 0.5) !important;
+  }
+  .read-mode div#post {
+    background: rgba(158, 204, 171, 0.5) !important;
+  }
+  
+  [data-theme="dark"] .read-mode #aside-content .card-widget {
+    background: rgba(25, 25, 25, 0.9) !important;
+    color: #ffffff;
+  }
+  [data-theme="dark"] .read-mode div#post {
+    background: rgba(25, 25, 25, 0.9) !important;
+    color: #ffffff;
+  }
+  
+
+  /* 阅读模式下，将背景更改为星空图片 */
+.read-mode #aside-content .card-widget,
+.read-mode div#post {
+  background: url('你的星空图像URL') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;  /* 设置文字颜色为白色，确保能在星空背景上清晰显示 */
+}
+
+/* 夜间模式下的阅读模式，设置星空背景 */
+[data-theme="dark"] .read-mode #aside-content .card-widget,
+[data-theme="dark"] .read-mode div#post {
+  background: url('你的星空图像URL') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+}

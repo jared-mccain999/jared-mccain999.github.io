@@ -1,0 +1,18 @@
+button#go-up #percent {
+    display: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+button#go-up span:nth-child(2) {
+    font-size: 12px;
+    margin-right: -1px;
+}
+
+button#go-up:hover i {
+    display: block;
+}
+
+button#go-up:hover #percent {
+    display: none;
+}

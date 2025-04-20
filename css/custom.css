@@ -1,0 +1,382 @@
+/* 页脚与头图透明 */
+  /* #footer {
+    background: transparent !important;
+  } */
+  /* #page-header {
+    background: transparent !important;
+  } */
+  
+  /* 白天模式遮罩透明 */
+  #footer::before {
+    background: transparent !important;
+  }
+  /* #page-header::before {
+    background: transparent !important;
+  }
+   */
+  /* 夜间模式遮罩透明 */
+  [data-theme="dark"] #footer::before {
+    background: transparent !important;
+  }
+  /* [data-theme="dark"] #page-header::before {
+    background: transparent !important;
+  } */
+
+
+
+  @font-face {
+    /* 为载入的字体取名字(随意) */
+    font-family: 'AaZhuNiWoMingMeiXiangChunTian-2';	
+    /* 字体文件地址(相对或者绝对路径都可以) */
+    src: url('../font/AaZhuNiWoMingMeiXiangChunTian-2.ttf') format("truetype");
+    /* 定义加粗样式(加粗多少) */
+    font-weight: normal;
+    /* 定义字体样式(斜体/非斜体) */
+    font-style: normal;
+    /* 定义显示样式 */
+    font-display: block;
+  }
+
+
+
+  /* 一级菜单居中 */
+  #nav .menus_items {
+    position: absolute !important;
+    width: fit-content !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+/* 子菜单横向展示 */
+/* #nav .menus_items .menus_item:hover .menus_item_child {
+  display: flex !important;
+} */
+/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
+  .menus_items .menus_item:nth-child(2) .menus_item_child {
+    left: -125px;
+  }
+
+
+/* 日间模式不生效 */
+[data-theme="light"] #site-name,
+[data-theme="light"] #site-title,
+[data-theme="light"] #site-subtitle,
+[data-theme="light"] #post-info {
+  animation: none;
+}
+/* 夜间模式生效 */
+[data-theme="dark"] #site-name,
+[data-theme="dark"] #site-title {
+  animation: light_15px 10s linear infinite;
+}
+[data-theme="dark"] #site-subtitle {
+  animation: light_10px 10s linear infinite;
+}
+[data-theme="dark"] #post-info {
+  animation: light_5px 10s linear infinite;
+}
+/* 关键帧描述 */
+@keyframes light_15px {
+  0% {
+    text-shadow: #5636ed 0 0 15px;
+  }
+  12.5% {
+    text-shadow: #11ee5e 0 0 15px;
+  }
+  25% {
+    text-shadow: #f14747 0 0 15px;
+  }
+  37.5% {
+    text-shadow: #f1a247 0 0 15px;
+  }
+  50% {
+    text-shadow: #f1ee47 0 0 15px;
+  }
+  50% {
+    text-shadow: #b347f1 0 0 15px;
+  }
+  62.5% {
+    text-shadow: #002afa 0 0 15px;
+  }
+  75% {
+    text-shadow: #ed709b 0 0 15px;
+  }
+  87.5% {
+    text-shadow: #39c5bb 0 0 15px;
+  }
+  100% {
+    text-shadow: #5636ed 0 0 15px;
+  }
+}
+
+@keyframes light_10px {
+  0% {
+    text-shadow: #5636ed 0 0 10px;
+  }
+  12.5% {
+    text-shadow: #11ee5e 0 0 10px;
+  }
+  25% {
+    text-shadow: #f14747 0 0 10px;
+  }
+  37.5% {
+    text-shadow: #f1a247 0 0 10px;
+  }
+  50% {
+    text-shadow: #f1ee47 0 0 10px;
+  }
+  50% {
+    text-shadow: #b347f1 0 0 10px;
+  }
+  62.5% {
+    text-shadow: #002afa 0 0 10px;
+  }
+  75% {
+    text-shadow: #ed709b 0 0 10px;
+  }
+  87.5% {
+    text-shadow: #39c5bb 0 0 10px;
+  }
+  100% {
+    text-shadow: #5636ed 0 0 10px;
+  }
+}
+
+@keyframes light_5px {
+  0% {
+    text-shadow: #5636ed 0 0 5px;
+  }
+  12.5% {
+    text-shadow: #11ee5e 0 0 5px;
+  }
+  25% {
+    text-shadow: #f14747 0 0 5px;
+  }
+  37.5% {
+    text-shadow: #f1a247 0 0 15px;
+  }
+  50% {
+    text-shadow: #f1ee47 0 0 5px;
+  }
+  50% {
+    text-shadow: #b347f1 0 0 5px;
+  }
+  62.5% {
+    text-shadow: #002afa 0 0 5px;
+  }
+  75% {
+    text-shadow: #ed709b 0 0 5px;
+  }
+  87.5% {
+    text-shadow: #39c5bb 0 0 5px;
+  }
+  100% {
+    text-shadow: #5636ed 0 0 5px;
+  }
+}
+
+
+
+/* 透明度设置 */
+/* 文章页背景 */
+.layout_post>#post {
+  /* 以下代表透明度为0.7 可以自行修改*/
+  background: rgba(255,255,255,.9);
+}
+
+/* 所有页面背景 */
+#aside_content .card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
+  /* 以下代表透明度为0.7 */
+  background: rgba(255,255,255,.7);
+}
+/*侧边卡片的透明度 */
+:root {
+--card-bg: rgba(255, 255, 255, .7);
+}
+/* 页脚透明 */
+#footer {
+/* 以下代表透明度为0.7 */
+background: rgba(255,255,255, .3);
+}
+
+#page-header.nav-fixed #nav {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: var(--backdrop-filter);
+}
+
+
+
+/* 卡片背景 */
+:root {
+  --trans-light: rgba(255, 255, 255, 0.88);
+  --trans-dark: rgba(25, 25, 25, 0.88);
+  --border-style: 1px solid rgb(169, 169, 169);
+  --backdrop-filter: blur(5px) saturate(150%);
+}
+
+/* 菜单动态图标的大小 */
+svg.menu_icon {
+  width: 1.28em;
+  height: 1.28em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+/* 图标设置 */
+@font-face {
+  font-family: 'iconfont';
+  src: url('/fonts/iconfont.eot');
+  src: url('/fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/iconfont.woff2') format('woff2'),
+  url('/fonts/iconfont.woff') format('woff'),
+  url('/fonts/iconfont.ttf') format('truetype'),
+  url('/fonts/iconfont.svg#iconfont') format('svg');
+  }
+
+  /* 各个卡片 */
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-youxiang:before {
+    content: "\e605";
+  }
+  
+  .icon-GitHub:before {
+    content: "\ea0a";
+  }
+  
+  .icon-qq:before {
+    content: "\e74a";
+  }
+  
+  .icon-weixin:before {
+    content: "\e607";
+  }
+  
+  .icon-ic_jiemuku_narmol:before {
+    content: "\e601";
+  }
+  
+  .icon-aside_pricetag_mubanguanli_normal:before {
+    content: "\e602";
+  }
+  
+  .icon-aside_statistics_broadcast_normal:before {
+    content: "\e603";
+  }
+  
+  .icon-kafei_1:before {
+    content: "\e6c9";
+  }
+  
+  .icon-tupian:before {
+    content: "\e6ca";
+  }
+  
+  .icon-dangan:before {
+    content: "\e6dc";
+  }
+  
+  .icon-bofang:before {
+    content: "\e6dd";
+  }
+  
+  .icon-paizhao:before {
+    content: "\e6de";
+  }
+  
+  .icon-shenghuoxiuxian:before {
+    content: "\e6df";
+  }
+  
+  .icon-xinxi:before {
+    content: "\e6e0";
+  }
+  
+  .icon-yudu:before {
+    content: "\e6e1";
+  }
+  
+  .icon-yonghu:before {
+    content: "\e6e2";
+  }
+  
+  .icon-tupian1:before {
+    content: "\e6e3";
+  }
+  
+  .icon-yundong:before {
+    content: "\e6e4";
+  }
+  
+  .icon-zixun:before {
+    content: "\e6e5";
+  }
+  
+  .icon-bofang1:before {
+    content: "\e6e6";
+  }
+  
+  .icon-chakansousuo:before {
+    content: "\e6e7";
+  }
+  
+  .icon-dangan1:before {
+    content: "\e6e8";
+  }
+  
+  .icon-qianbao:before {
+    content: "\e6e9";
+  }
+  
+  .icon-jifen:before {
+    content: "\e6ea";
+  }
+  
+  .icon-shenghuoxiuxian1:before {
+    content: "\e6eb";
+  }
+  
+  .icon-paizhao1:before {
+    content: "\e6ec";
+  }
+  
+  .icon-pinglun:before {
+    content: "\e6ed";
+  }
+  
+  
+  
+  
+/* 社交卡片动态图标 */
+svg.social_icon {
+  width: 1.40em;
+  height: 1.40em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+} 
+
+/* 公告信息 */
+#welcome-info {
+  background: linear-gradient(45deg, rgba(185, 244, 243,0.3), #e3fbf9);
+  border-radius: 18px;
+  padding: 8px;
+}
+[data-theme="dark"] #welcome-info {
+  background: #212121;
+}
+  
